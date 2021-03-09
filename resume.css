@@ -1,0 +1,488 @@
+body{
+    margin:0px;
+    height: 100%;
+    width: 100%;
+}
+   /* Body header */
+#body-header{
+    height:65vh;
+    background-image:url("./cover.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 2;
+    background-position: center;
+    background-attachment: fixed;
+}
+    /* horizontal List */
+.horizontal-list{
+    list-style: none;
+    padding-left: 0px;
+    margin: 0px;
+}
+.horizontal-list li{
+    display: inline-block;
+    font-size: 1.5rem;
+    margin: 0px 8px 8px 0px;
+}
+
+.horizontal-list li a{
+color:white;
+text-decoration: none;
+
+}
+nav{
+    background-color:rgba(0, 0, 0, 0.2);
+}
+.nav-menu li a:hover{
+    color:lightgray;
+    border-bottom: 1px solid white;
+    }
+.nav-menu{
+    border-bottom: rgba(255, 255, 255, 0) solid;
+}
+.nav-menu li a{
+    margin: 20px;
+    transition: color 0.5s, border-bottom 4s;
+}
+
+/* Nav for small devices */
+#nav-sm-list,#nav-sm{
+    height: 0;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+@media screen and (max-width:900px){
+    .nav-menu{
+        height: 0;
+        width: 0;
+    }
+    .nav-menu li{
+        display: none;
+    }
+    #nav-sm{
+        
+        height: 8%;
+        width: 100%;
+        position: absolute;
+        /* left:85%; */
+        font-size: 3.0rem;
+        background-color:rgba(0, 0, 0, 0.2);
+    }
+    #nav-sm i{
+        position: absolute;
+        left: 85%;
+    }
+    #nav-sm-list li{
+        list-style: none;
+        font-size: 1.5rem;
+        margin-bottom: 1%;
+    }
+    #nav-sm-list a{
+        text-decoration: none;
+        color: white;
+    }
+    #nav-sm-list:target{
+        height: 40%;
+        width: 100%;
+        top: 0%;
+        left: 0%;
+        background-color:rgba(0, 0, 0, 1);
+        /* text-align: center; */
+    }
+   
+}
+
+.text-center{
+    text-align: center;
+}
+
+#name-social-container{
+    margin-top: 20vh;
+}
+
+#my-name{
+    font-size: 3rem;
+    letter-spacing: 0.1rem;
+    color: white;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+.social-icons li a i{
+    padding:25px;
+    height: 30px;
+    width: 30px;
+    /* border-radius: 100px; */
+
+}
+.social-icons li a i:hover{
+    border-radius: 100px;
+    box-shadow: 0px 0px 6px 4px white;
+}
+
+@media screen and (max-width:500px){
+    .social-icons li a i{
+        padding:10px;
+        height: 25px;
+        width: 25px;
+        /* border-radius: 100px; */
+    
+    }
+}
+
+section{
+    width:100%;
+    /* height: 75vh; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section:nth-child(2n){
+    background-color: #9e9b9b29;
+}
+section:nth-child(2n+1){
+    background-color: white;
+}
+
+        /* About */
+#about{
+        height:auto;
+        width: 100%;
+        position: relative;
+       
+    }
+#about-para p{
+    text-align: justify;
+}
+#my-image{
+    height: 15rem;
+    width: 15rem;
+    margin: auto;
+    margin-top: -17vh;
+}
+
+#my-image img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 0px 6px 4px black;
+    
+}
+#about-para p{
+    font-size: 1.3rem;
+    width:50vw;
+ 
+}
+
+/* SKILLS SECTION   */
+
+.skills-display{
+    width: 70%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.mb75px{
+    margin-bottom:75px ;
+}
+.skill-progress {
+    width: 12rem;
+    height: 1.8rem;
+    background-color: lightgray;
+    border-radius: 1rem;
+    border: 2px solid black;
+    margin-bottom:50px ;
+}
+.skill-progress>div{
+    
+    border-radius: 20px 0px 0px 20px;
+}
+
+.skill-name span{
+    color:white;
+    font-size: 1.3rem;
+    margin-left: 6px;
+}
+/* Percentage Classes */
+
+.eighty-five-percentage{
+    width: 85%;
+    height: inherit;
+}
+.seventy-five-percentage{
+    width: 75%;
+    height: inherit;
+}
+.seventy-percentage{
+    width: 70%;
+    height: inherit;
+}
+.sixty-five-percentage{
+    width: 65%;
+    height: inherit;
+}
+.sixty-percentage{
+    width: 60%;
+    height: inherit;
+}
+.forty-percentage{
+    width: 40%;
+    height: inherit;
+}
+/* Background-colors */
+
+.mb-blue{
+    background-color: blue;
+}
+.mb-orange{
+    background-color: orange;
+}
+.mb-teal{
+    background-color: teal;
+}
+.mb-green{
+    background-color: green;
+}
+.mb-bluevoilet{
+    background-color: blueviolet;
+}
+.mb-purple{
+    background-color: purple;
+}
+.mb-tomato{
+    background-color: tomato;
+}
+
+/* EDUCATION */
+#education{
+    width: 100%;
+}
+.education-container{
+    position:relative;
+    width: 75vw;
+    margin-bottom: 5%;
+}
+
+.institute{
+    position:relative;
+    height:auto;
+    width:30vw;
+    left: 7%;
+    /* border:1px solid black; */
+    box-shadow: 0px 0px 6px 4px gray;
+}
+
+.institute:nth-child(2n){
+    left:53%;
+}
+.timeline-divider{
+    position:absolute;
+    height:70%;
+    width: 0;
+    border:3px dashed #0096fa6b;
+    top:15%;
+    left:50%
+}
+.timeline-traveller {
+    position: sticky;
+    transform: translate(-12px,-5px);
+    top: 12%;
+    font-size: 1.5rem;
+    color: darkorange;
+}
+.btech img{
+    
+    width: 150px;
+    height: 50px;
+}
+.btech>.img-container{
+    margin-left: 2%;
+}
+.e12th img{
+    height: 40px;
+    width: 150px;
+}
+.e10th,.e12th,.btech{
+    
+    display:flex;
+    /* text-align: center; */
+    justify-content: space-around;
+}
+
+.e10th img{
+    margin-top: 5%;
+    height:50px;
+    width: 60px;
+}
+
+.education-container p{
+    font-weight: 700;
+}
+
+@media screen and (max-width:950px){
+    .education-container{
+        position:relative;
+        width: 90vw;
+        margin-bottom: 5%;
+    }
+    .institute{
+        position:relative;
+        height:auto;
+        width:75vw;
+        left: 1%;
+        margin-bottom: 5%;
+        font-size: 0.8rem;
+        /* border:1px solid black; */
+        box-shadow: 0px 0px 6px 4px gray;
+    }
+        .institute:nth-child(2n){
+            left:1%;
+        }
+        .timeline-divider{
+            position:absolute;
+            height:70%;
+            width: 0;
+            border:3px dashed #0096fa6b;
+            top:15%;
+            left:90%
+        }
+        .timeline-traveller {
+            position: sticky;
+            transform: translate(-12px,-5px);
+            top: 20%;
+            font-size: 1.5rem;
+            color: darkorange;
+        }
+        
+    
+}
+
+/* PORTFOLIO SECTION */
+.portfolio-container{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; 
+}
+.portfolio-container img{
+    /* margin: 20px; */
+    height: 250px;
+    width: 500px;
+    max-width:100%;
+    padding: 5px;
+    border: 2px solid black;
+}
+.project-pic{
+    /* margin: 20px; */
+    padding: 5px;
+}
+.portfolio-list{
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    
+}
+.portfolio-list li{
+    padding: 5px;
+    width:10%;
+    font-size: 2rem;
+}
+.project-title{
+    font-size: 1.2rem;
+}
+.ijs:hover{
+    color:rgb(247,223,30);
+    transform: scale(1.5);
+}
+.ireact:hover{
+    color: #61DBFB;
+    transform: scale(1.5);
+}
+.inode:hover{
+    color:#68A063;
+    transform: scale(1.5);
+}
+.ihtml:hover{
+    color:#E44D26;
+    transform: scale(1.5);
+}
+.icss:hover{
+    color:#264DE4;
+    transform: scale(1.5);
+}
+.ipsql:hover{
+    color:#336791;
+    transform: scale(1.5);
+}
+
+/* CONTACT SECTION   */
+#contact{
+    color: white;
+    background: linear-gradient(to top right,rgb(3, 3, 141),rgb(195, 3, 243));
+    width: 100%;
+}
+.fs2-5rem{
+    font-size:2.5rem;
+}
+.row {
+    width: 85vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+  }
+  
+.column {
+  padding: 10px;
+}
+
+.info{
+    width: 35vw;
+    margin: 20px;
+    padding: 5px;
+    font-size: 1rem;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid white;
+}
+
+.btn-contact{
+    color: white;
+    background: transparent;
+    font-weight: 700;
+    left: 50%;
+    border: 2px solid white;
+    padding: 10px;
+}
+.contact-details {
+    width: 35vw;
+}
+.contact-details i{
+    padding: 10px;
+}
+.fs1-5rem{
+    font-size: 1.5rem;
+}
+.yours-details{
+    text-align: center;
+    
+}
+
+@media screen and (max-width:599px){
+    .row{
+        display: block;
+    }
+    .info{
+        width: 80%;
+        max-width: 100%;
+    }
+    .contact-details{
+        width: 90%;
+    }
+}
