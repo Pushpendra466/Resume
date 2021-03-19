@@ -42,57 +42,78 @@ for(var i = 2;i<navMenuAnchorTags.length;i++)
     
 }
 
-// var percentageDiv = document.getElementsByClassName('eighty-five-percentage');
-// percentageDiv[0].style.width='0%';
-// var x = 0;
-//     var intrvl = setInterval(function(){
-//         console.log(x,'tim')
-//         if(x==85){
-//             console.log("brk")
-//             clearInterval(intrvl)
-//         }
-//         x++;
-//         percentageDiv[0].style.width=x+'%';
-
-//     },10)
-   
-   
-   
-
 var progressBars = document.querySelectorAll('.skill-progress > div');
 var skillContainer = document.getElementById('skills-container');
 window.addEventListener('scroll',checkScroll);
-var animationDone = false;
 
 function initialiseBars(){
     for(var bar of progressBars){
         bar.style.width=0+'%';
     }
 }
+// initialiseBars();
+
+// function fillBars(){
+
+//     for(let bar of progressBars){
+//         let targetwidth = bar.getAttribute('data-bar-width');
+//         let currentWidth = 0;
+//         let interval = setInterval(function(){
+//             if(currentWidth > targetwidth){
+//                 clearInterval(interval);
+//             }
+//             currentWidth++;
+//             bar.style.width=currentWidth+'%';
+//         },10)
+//     }
+// }
+
+// function checkScroll(){
+//     var coordinates = skillContainer.getBoundingClientRect();
+//     if(!animationDone && coordinates.top < window.innerHeight){
+//         fillBars()
+//         animationDone = true;
+//     }else if(coordinates.top > window.innerHeight){
+//         animationDone = false;
+//         initialiseBars();
+//     }
+// }
+
+for(a of progressBars)
+{
+    a.animationDone = false;
+}
+
+function initialiseBar(bar){
+        bar.style.width=0+'%';
+}
+
 initialiseBars();
 
-function fillBars(){
-
-    for(let bar of progressBars){
-        let targetwidth = bar.getAttribute('data-bar-width');
+function fillBar(bar){
+    let targetwidth = bar.getAttribute('data-bar-width');
         let currentWidth = 0;
         let interval = setInterval(function(){
             if(currentWidth > targetwidth){
                 clearInterval(interval);
+                return;
             }
             currentWidth++;
             bar.style.width=currentWidth+'%';
         },10)
-    }
 }
 
 function checkScroll(){
-    var coordinates = skillContainer.getBoundingClientRect();
-    if(!animationDone && coordinates.top < window.innerHeight){
-        fillBars()
-        animationDone = true;
+    for(let bar of progressBars)
+    { let coordinates = bar.getBoundingClientRect();
+        console.log(bar.animationDone)
+        if(!bar.animationDone && coordinates.top < window.innerHeight){
+        fillBar(bar);
+        bar.animationDone = true;
     }else if(coordinates.top > window.innerHeight){
-        animationDone = false;
-        initialiseBars();
+        bar.animationDone = false;
+        initialiseBar(bar);
     }
+}
+
 }
