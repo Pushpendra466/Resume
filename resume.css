@@ -419,7 +419,15 @@ section:nth-child(2n+1){
 }
 .ipsql:hover{
     color:#336791;
-    transform: scale(1.5);
+    width: 40px;
+}
+.iejs:hover{
+    color:#A91E50;
+    width: 40px;
+}
+.imongo:hover{
+    color: #10AA50;
+    width: 40px;
 }
 
 /* CONTACT SECTION   */
